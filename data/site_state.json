@@ -1,0 +1,59 @@
+{
+  "app_config": {},
+  "job_search_preferences": {
+    "keywords": [
+      "desenvolvedor",
+      "sistemas",
+      "fullstack",
+      "desenvolvimento mobile",
+      "desenvolvimento web",
+      "desenvolvimento desktop",
+      "firebase",
+      "mysql",
+      "software",
+      "hardware",
+      "automação",
+      "sistemas operacionais",
+      "modelagem 3d",
+      "impressão 3d",
+      "github"
+    ],
+    "required_keywords": [],
+    "experience_levels": [
+      "estagio",
+      "junior"
+    ],
+    "work_modes": [
+      "remoto",
+      "hibrido",
+      "presencial"
+    ],
+    "company_sizes": [
+      "startup",
+      "pequena",
+      "media",
+      "grande"
+    ],
+    "contract_types": [
+      "clt",
+      "pj",
+      "freela",
+      "estagio"
+    ],
+    "education_level": "superior_incompleto",
+    "sectors": [
+      "Tecnologia",
+      "Programação"
+    ],
+    "accept_travel": true,
+    "location_city": "Registro",
+    "location_radius_km": 60
+  },
+  "last_resume": {
+    "path": null,
+    "filename": null,
+    "uploaded_at": null
+  },
+  "profile_updated_at": null,
+  "last_job_search_at": "2026-02-05T18:15:03.609694"
+}

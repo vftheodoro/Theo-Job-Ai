@@ -1,0 +1,22 @@
+{
+  "total_emails_sent": 0,
+  "total_errors": 0,
+  "success_rate": 100,
+  "emails_by_status": {
+    "success": 0,
+    "error": 0,
+    "pending": 0
+  },
+  "emails_by_month": {},
+  "popular_companies": {},
+  "email_templates_used": {
+    "ai_generated": 0,
+    "manual": 0
+  },
+  "ai_usage": {
+    "cv_analyzed": 0,
+    "emails_generated": 0
+  },
+  "response_times": [],
+  "last_updated": null
+}

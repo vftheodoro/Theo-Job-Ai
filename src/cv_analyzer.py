@@ -130,7 +130,8 @@ IMPORTANTE:
         profile: Dict[str, Any],
         company_name: Optional[str] = None,
         job_title: Optional[str] = None,
-        job_description: Optional[str] = None
+        job_description: Optional[str] = None,
+        email_template: Optional[str] = None
     ) -> tuple[str, str]:
         """Gera email HTML completo e bonito usando Gemini."""
         logger.info("🎨 Gerando email HTML com IA...")
@@ -157,10 +158,20 @@ Idiomas: {', '.join(profile.get('languages', []))}
         if job_description:
             context += f"\nDESCRIÇÃO DA VAGA:\n{job_description}"
         
+        # Template adicional se fornecido
+        template_instruction = ""
+        if email_template:
+            template_instruction = f"""
+
+TEMPLATE PADRÃO (use como base/inspiração):
+{email_template}
+
+Adapte o template acima para a vaga específica, mantendo o tom e estrutura mas personalizando com informações relevantes."""
+        
         prompt = f"""
 Você é um profissional experiente escrevendo um email de candidatura simples e direto.
 
-{context}
+{context}{template_instruction}
 
 Crie um email HTML SIMPLES e HUMANO de candidatura que seja:
 

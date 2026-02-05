@@ -252,12 +252,14 @@ def send_ai_generated_email(
     profile_data: Dict[str, Any],
     company_name: Optional[str] = None,
     job_title: Optional[str] = None,
-    job_description: Optional[str] = None
+    job_description: Optional[str] = None,
+    cv_attachment: Optional[str] = None,
+    email_template: Optional[str] = None
 ) -> bool:
     """Envia email gerado por IA baseado no perfil."""
     
     logger.info("=" * 80)
-    logger.info("🤖 ENVIANDO CANDIDATURA COM EMAIL GERADO POR IA")
+    logger.info("[IA] ENVIANDO CANDIDATURA COM EMAIL GERADO POR IA")
     logger.info("=" * 80)
     
     try:
@@ -267,24 +269,28 @@ def send_ai_generated_email(
             profile=profile_data,
             company_name=company_name,
             job_title=job_title,
-            job_description=job_description
+            job_description=job_description,
+            email_template=email_template
         )
+        
+        # Preparar anexos
+        attachments = [cv_attachment] if cv_attachment else None
         
         # Enviar
         sender = EmailSender()
-        success = sender.send_html_email(to_address, subject, html_body)
+        success = sender.send_html_email(to_address, subject, html_body, attachments=attachments)
         
         logger.info("=" * 80)
         if success:
-            logger.info("✅ CANDIDATURA IA ENVIADA COM SUCESSO")
+            logger.info("[OK] CANDIDATURA IA ENVIADA COM SUCESSO")
         else:
-            logger.info("❌ FALHA NO ENVIO")
+            logger.info("[ERRO] FALHA NO ENVIO")
         logger.info("=" * 80)
         
         return success
         
     except Exception as e:
-        logger.error(f"❌ Erro crítico: {e}", exc_info=True)
+        logger.error(f"[ERRO] Erro critico: {e}", exc_info=True)
         return False
 
 
