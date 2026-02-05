@@ -158,46 +158,49 @@ Idiomas: {', '.join(profile.get('languages', []))}
             context += f"\nDESCRIÇÃO DA VAGA:\n{job_description}"
         
         prompt = f"""
-Você é um especialista em criar emails profissionais de candidatura a vagas de emprego.
+Você é um profissional experiente escrevendo um email de candidatura simples e direto.
 
 {context}
 
-Crie um email HTML completo, moderno e profissional de candidatura que:
+Crie um email HTML SIMPLES e HUMANO de candidatura que seja:
 
-1. CONTEÚDO:
-   - Tenha um assunto atrativo e direto
-   - Introdução personalizada e envolvente
-   - Destaque as principais qualificações do candidato de forma natural
-   - Mostre interesse genuíno pela vaga/empresa
-   - Tenha call-to-action claro
-   - Seja conciso (máximo 200 palavras no corpo)
+1. CONTEÚDO (ESSENCIAL):
+   - Tom conversacional e profissional, como se fosse escrito por uma pessoa real
+   - Assunto direto e objetivo (ex: "Candidatura para [Vaga] - [Nome]")
+   - Cumprimento simples e educado
+   - 2-3 parágrafos curtos explicando:
+     * Quem você é e o que faz
+     * Por que se interessa pela vaga/empresa
+     * Principais qualificações relevantes (sem exagero)
+   - Encerramento natural pedindo retorno
+   - Máximo 150 palavras no total
 
-2. DESIGN HTML:
-   - Layout moderno e responsivo
-   - Use cores profissionais (gradientes sutis aceitáveis)
-   - Tipografia limpa e legível
-   - Seções bem organizadas
-   - Badges/tags para skills principais
-   - Footer com informações de contato completas
-   - Inclua ícones/emojis onde apropriado (📧, 💼, etc)
+2. DESIGN (MINIMALISTA):
+   - HTML simples e limpo - SEM gradientes, SEM cores chamativas
+   - Fundo branco, texto preto/cinza escuro
+   - Fonte padrão (Arial, Helvetica, sans-serif)
+   - Apenas negrito para destacar pontos importantes
+   - NO máximo uma linha separadora simples
+   - Footer discreto com contatos (sem ícones exagerados)
+   - SEM badges, SEM tags coloridas, SEM emojis no corpo
 
-3. FORMATO:
-   - HTML5 válido com CSS inline
-   - Compatível com clientes de email
-   - Mobile-friendly
+3. TOM:
+   - Natural e humano, não corporativo demais
+   - Demonstre interesse genuíno, não desesperado
+   - Confiante mas não arrogante
+   - Como se você estivesse conversando pessoalmente
 
 Retorne no seguinte formato JSON:
 {{
-    "subject": "Assunto do email (máx 70 caracteres)",
-    "html_body": "HTML completo do email (incluindo <!DOCTYPE>, <html>, <head>, <body>, etc)"
+    "subject": "Assunto simples e direto",
+    "html_body": "HTML minimalista e profissional"
 }}
 
 IMPORTANTE:
-- O email deve ser autêntico e profissional, não genérico
-- Personalize baseado nas informações do candidato
-- Se houver empresa/vaga específica, mencione explicitamente
-- Use linguagem brasileira natural e profissional
-- Retorne APENAS o JSON válido
+- Menos é mais - seja direto e objetivo
+- Evite clichês corporativos e linguagem robótica
+- Se não houver vaga específica, faça uma candidatura espontânea simples
+- Retorne APENAS o JSON válido, sem markdown
 """
         
         try:
