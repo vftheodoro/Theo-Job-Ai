@@ -5,6 +5,8 @@ import smtplib
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 from pathlib import Path
 from typing import Optional, Dict, Any
 
@@ -90,7 +92,20 @@ class EmailSender:
             # Anexar HTML
             msg.attach(MIMEText(html_body, "html", "utf-8"))
             
-            # TODO: Implementar anexos (currículos)
+            # Anexar arquivos
+            if attachments:
+                for file_path in attachments:
+                    if os.path.exists(file_path):
+                        with open(file_path, 'rb') as f:
+                            part = MIMEBase('application', 'octet-stream')
+                            part.set_payload(f.read())
+                            encoders.encode_base64(part)
+                            filename = os.path.basename(file_path)
+                            part.add_header('Content-Disposition', f'attachment; filename="{filename}"')
+                            msg.attach(part)
+                            logger.info(f"📎 Anexo adicionado: {filename}")
+                    else:
+                        logger.warning(f"⚠️ Arquivo não encontrado: {file_path}")
             
             # Conectar e enviar
             with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
