@@ -26,7 +26,7 @@ cp .env.example .env
 # Edite .env e preencha:
 # GMAIL_ADDRESS=seu.email@gmail.com
 # GMAIL_APP_PASSWORD=senha_gerada_aqui
-# GEMINI_API_KEY=AIzaSyBq2heFnGJ1RVMevUIsINJwKuI5MOm9zPY
+# GEMINI_API_KEY=sua_chave_aqui
 ```
 
 ## Instalar

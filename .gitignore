@@ -1,0 +1,42 @@
+# Arquivos sensíveis - NUNCA commitar
+.env
+*.env
+.env.*
+
+# Credenciais e configurações
+data/user_profile.json
+
+# Uploads e arquivos temporários
+uploads/
+*.pdf
+Curriculo_*.pdf
+
+# Logs
+logs/
+*.log
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
