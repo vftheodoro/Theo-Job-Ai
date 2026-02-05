@@ -122,6 +122,9 @@ class JobFinder:
     ) -> Generator[str, None, None]:
         """Busca vagas de forma inteligente com pensamentos em tempo real."""
         
+        # Garantir que max_results é int
+        max_results = int(max_results)
+        
         yield "[INICIANDO] Analisando seu perfil...\n"
         time.sleep(0.2)
         

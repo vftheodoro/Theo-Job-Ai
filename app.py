@@ -2495,7 +2495,7 @@ def search_jobs_api():
         
         payload = request.get_json(silent=True) or {}
         region = payload.get('region') or request.args.get('region', 'both')  # 'br', 'int', ou 'both'
-        max_results = payload.get('max_results') or request.args.get('max_results', 10)
+        max_results = int(payload.get('max_results') or request.args.get('max_results', 10))
         preferences = payload.get('preferences')
 
         config_b64 = request.args.get('config')

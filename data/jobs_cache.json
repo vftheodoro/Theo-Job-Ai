@@ -1,0 +1,65 @@
+{
+  "updated_at": "2026-02-05T18:33:33.167503",
+  "results": [
+    {
+      "title": "Frontend Engineer (React)",
+      "company": "Meta",
+      "location": "London, UK",
+      "url": "https://meta.com/jobs/frontend",
+      "description": "React, TypeScript. 4+ years. Hybrid. GBP 140k-180k",
+      "posted": "1 dia",
+      "score": 50,
+      "reason": "Selecao automatica (fallback)",
+      "apply_email": "talentos@meta.com",
+      "rank": 1
+    },
+    {
+      "title": "Full Stack Developer (Node.js + React)",
+      "company": "Stone Co",
+      "location": "Sao Paulo, BR",
+      "url": "https://jobs.stone.co/fullstack",
+      "description": "Node.js, React, PostgreSQL. Remoto. Beneficios: vale refeicao, vale saude, flex.",
+      "posted": "1 semana",
+      "score": 50,
+      "reason": "Selecao automatica (fallback)",
+      "apply_email": "talentos@jobs.stone.co",
+      "rank": 2
+    },
+    {
+      "title": "DevOps Engineer",
+      "company": "Rappi",
+      "location": "Sao Paulo, BR",
+      "url": "https://jobs.rappi.com/devops",
+      "description": "Docker, Kubernetes, AWS. 3+ anos. Remoto, full-time.",
+      "posted": "1 semana",
+      "score": 50,
+      "reason": "Selecao automatica (fallback)",
+      "apply_email": "talentos@jobs.rappi.com",
+      "rank": 3
+    },
+    {
+      "title": "Desenvolvedor Python Senior",
+      "company": "Nubank",
+      "location": "Sao Paulo, BR",
+      "url": "https://jobs.nubank.com.br/python-senior",
+      "description": "Procuramos desenvolvedor Python com 5+ anos. Experiencia em APIs REST, Flask/Django. Salario: R$15-20k",
+      "posted": "2 dias",
+      "score": 50,
+      "reason": "Selecao automatica (fallback)",
+      "apply_email": "talentos@jobs.nubank.com.br",
+      "rank": 4
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Google",
+      "location": "Mountain View, USA",
+      "url": "https://careers.google.com/senior-engineer",
+      "description": "Full-stack engineer. Python/Go. 5+ years. Competitive salary + equity.",
+      "posted": "2 dias",
+      "score": 50,
+      "reason": "Selecao automatica (fallback)",
+      "apply_email": "talentos@careers.google.com",
+      "rank": 5
+    }
+  ]
+}
