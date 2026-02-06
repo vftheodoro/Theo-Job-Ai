@@ -14,6 +14,21 @@ Curriculo_*.pdf
 # Logs
 logs/
 *.log
+debug.log
+
+# Cache e dados temporários
+data/*.json
+!data/.gitkeep
+*.cache
+*.tmp
+__pycache__/
+
+# Backups
+*.bak
+*_old.*
+*_backup.*
+app_old.py
+app_new.py
 
 # Python
 .venv/
